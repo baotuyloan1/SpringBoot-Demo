@@ -47,7 +47,7 @@ public class DepartmentController {
 
 
     @PutMapping("/department/{id}")
-    public Department updateDepartment(@PathVariable("id") Long departmentId, @RequestBody Department department) {
+    public Department updateDepartment(@PathVariable("id") Long departmentId, @RequestBody Department department) throws DepartmentNotFoundException {
         return departmentService.updateDepartment(departmentId, department);
     }
 
